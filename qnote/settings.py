@@ -25,8 +25,8 @@ SECRET_KEY = '#2g#i#jqb7ls+fi#q!ch&m6f%4eixw+$c896i-g8zt%fkkg^ma'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#ALLOWED_HOSTS = ['www.fortunecoder.pythonanywhere.com']
 ALLOWED_HOSTS = []
-
 
 # Application definition
 

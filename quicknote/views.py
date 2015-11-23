@@ -4,6 +4,7 @@ from .forms import NoteForm
 from quicknote.models import Notebook
 import shortuuid
 
+
 def index(request):
 	if request.method == 'POST':
 		if 'userkey' in request.POST:
@@ -58,3 +59,5 @@ def note(request,qnoteid):
 		return render(request,'quicknote/error.html',{'errormsg':msg})
 
 
+def redir(request):
+	return HttpResponseRedirect(reverse('quick:redir'))
