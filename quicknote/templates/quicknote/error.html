@@ -1,0 +1,21 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+</html>
+	<head> 
+		<title>Quick Note</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'quicknote/css/sty3.css' %}">
+		<link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+
+	<div id="outter">
+			<div id="middle">
+				<div id="inner">
+					<div id="text-error">{{ errormsg }}</div>
+					<div id="button-error">  <a class="myButton"href="/quicknote/">HOME</a></div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

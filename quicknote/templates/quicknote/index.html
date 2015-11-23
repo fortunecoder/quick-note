@@ -1,0 +1,38 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+</html>
+	<head> 
+			<title>Quick Note</title>
+			<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+			<link rel="stylesheet" type="text/css" href="{% static 'quicknote/css/sty1.css' %}" />
+	</head>
+	<body>
+		<header id="line">
+			<div id="headline">
+				<span id="head-text"><a href="/quicknote/">Quick&nbsp;&nbsp;&nbsp;Note</a></span>
+			 </div>
+		</header>
+		<form action="." method="post" id="quick">{% csrf_token %}
+		</form>
+		<div id="outter">
+			<div id="middle">
+				<div id="inner">
+					<div id="button-inner">
+						<button type="submit" class="myButton" name="submit" form="quick" value="submit">Create Account</button>
+					</div>
+					<div id="division-inner"></div>
+					<div id="log-inner">
+					<form id="quick2" action="." method="post">{% csrf_token %}
+						<input  maxlength="22" type="text" id="pos" placeholder="Enter Key" name="userkey" required pattern=".*\S+.*" title="This field is required"> <br>
+						<button form="quick2" type="submit" id="pos2"  class="myButton" name="sub" form="quick" value="submit">Log In</button>
+					</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+
+</html>

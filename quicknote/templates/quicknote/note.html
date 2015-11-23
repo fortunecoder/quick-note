@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+</html>
+	<head lang="en">
+
+		<title> Quick Note </title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Quickly make notes of whatever you want without registration.">
+		<meta name="keywords" content="notes,text,online notepad,note safe,quick note">
+		<!--stylesheets-->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+		<link rel="stylesheet" type="text/css" href="{% static 'quicknote/css/sty2.css' %}" >
+		<!--scripts-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	</head>
+	<body>
+
+		<header id="line">
+			<div id="headline">
+				<span id="head-text"><a href="/quicknote/">Quick&nbsp;&nbsp;&nbsp;Note</a></span>
+			 </div>
+		</header>
+		<section id='chain'>
+		{% for qnote in note %}
+			<article class='entry'>
+				<div class='entry-head'>
+					<div class='entry-head-text'>{{ qnote.title }}</div>
+					<div class='entry-head-date'>{{ qnote.created_date }}</div>
+				</div>
+					<div class='entry-body'>{{ qnote.note|linebreaks }}</div>
+			</article>
+		{% endfor %}
+		</section>
+	</body>
+</html>
+
